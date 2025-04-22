@@ -1,4 +1,5 @@
 export default function Details({ data }) {
+  let now = data.startDate;
   return (
     <div className="details-container">
       <h2 className="details-heading">Person Details</h2>
@@ -11,15 +12,15 @@ export default function Details({ data }) {
         </div>
         <div className="education-experience">
           <h3>Education experience</h3>
-          <p>school name :</p>
-          <p>study titl e: </p>
-          <p>year of study : </p>
+          <p>school name : {data.school}</p>
+          <p>study title: {data.studyTitle} </p>
+          <p>year of study :{data.dateOfStudy} </p>
         </div>
         <div className="practical-experience">
           <h3>Practical experience</h3>
-          <p>company name :</p>
-          <p>position title : </p>
-          <p>duration : </p>
+          <p>company name : {data.companyName}</p>
+          <p>position title : {data.positionTitle}</p>
+          {/* <p>duration :{now}</p> */}
         </div>
       </div>
     </div>

@@ -8,21 +8,21 @@ export default function Form() {
   const [formData, setFormData] = useState({
     fName: "",
     lName: "",
-    age: 0,
+    age: "",
     school: "",
     studyTitle: "",
     dateOfStudy: "",
     companyName: "",
     positionTitle: "",
-    positionRensponsiblity: "",
-    startDate: "",
-    finishDate: "",
+    positionRensponsibility: "",
+    startDate: new Date(),
+    finishDate: new Date(),
   });
-  const [details, setDetails] = useState(formData);
+  const [details, setDetails] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setDetails((prevInf) => ({ ...formData }));
+    setDetails(true);
   };
 
   const handleChange = (event) => {
@@ -35,19 +35,14 @@ export default function Form() {
 
   return (
     <div className="main-container">
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <h2>CV Application Form</h2>
         <GeneralInformation data={formData} onChange={handleChange} />
         <EducationInformation data={formData} onChange={handleChange} />
         <PracticalExperience data={formData} onChange={handleChange} />
-        <button type="submit" onSubmit={handleSubmit}>
-          {" "}
-          submit
-        </button>
+        <button type="submit">submit</button>
       </form>
-      <div>
-        <Details data={details} onChange={handleSubmit}></Details>
-      </div>
+      {details && <Details data={formData} />}
     </div>
   );
 }
