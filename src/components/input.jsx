@@ -1,6 +1,6 @@
 function Input(props) {
   return (
-    <>
+    <div className="input-container">
       <label htmlFor={props.id}>{props.name}</label>
       <input
         name={props.name}
@@ -9,7 +9,7 @@ function Input(props) {
         id={props.id}
         onChange={props.onChange}
       />
-    </>
+    </div>
   );
 }
 export default Input;

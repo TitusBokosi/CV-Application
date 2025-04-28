@@ -56,7 +56,7 @@ function Form() {
   return (
     <>
       <form onSubmit={handleSubmition}>
-        <h1>CV application</h1>
+        <h1>CV APPLICATION</h1>
         <GeneralInformation
           data={formData}
           onChange={handleChange}

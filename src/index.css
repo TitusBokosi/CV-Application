@@ -5,12 +5,14 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: black;
+  padding: 1rem;
 }
 
 a {
@@ -31,8 +33,9 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5rem;
   line-height: 1.1;
+  align-self: center;
 }
 
 button {
@@ -42,7 +45,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgb(12, 135, 243);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -52,6 +55,32 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+input {
+  background-color: white;
+  border: solid rgb(12, 135, 243) 1px;
+  outline: 0;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  color: black;
+}
+.input-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 @media (prefers-color-scheme: light) {
