@@ -1,5 +1,7 @@
 import { useState } from "react";
 import GeneralInformation from "./generalInformation";
+import EducationExperience from "./educationExperience";
+import PracticalExperience from "./practicalExperience";
 function Form() {
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +32,9 @@ function Form() {
         data={formData}
         onChange={handleChange}
       ></GeneralInformation>
+      <EducationExperience data={formData} onChange={handleChange} />
+      <PracticalExperience data={formData} onChange={handleChange} />
+      <button type="submit">submit form</button>
     </form>
   );
 }
