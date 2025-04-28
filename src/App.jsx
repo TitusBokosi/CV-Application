@@ -1,14 +1,5 @@
-import { useState } from "react";
-import Form from "./cv-form";
-
-import "./App.css";
-
+import Form from "./components/form";
 function App() {
-  return (
-    <div className="container">
-      <Form />
-    </div>
-  );
+  return <Form></Form>;
 }
-
 export default App;
