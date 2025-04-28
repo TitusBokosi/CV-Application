@@ -29,6 +29,8 @@ function Form() {
     finishDate: "",
   });
 
+  const [isSubmited, setIsSubmited] = useState(false);
+
   const handleSubmition = (event) => {
     event.preventDefault();
     setDisplayData({
@@ -43,6 +45,7 @@ function Form() {
       startDate: formData.startDate,
       finishDate: formData.finishDate,
     });
+    setIsSubmited(true);
   };
 
   const handleChange = (event) => {
@@ -52,21 +55,23 @@ function Form() {
       [name]: value,
     }));
   };
-
-  return (
-    <>
-      <form onSubmit={handleSubmition}>
-        <h1>CV APPLICATION</h1>
-        <GeneralInformation
-          data={formData}
-          onChange={handleChange}
-        ></GeneralInformation>
-        <EducationExperience data={formData} onChange={handleChange} />
-        <PracticalExperience data={formData} onChange={handleChange} />
-        <button type="submit">submit form</button>
-      </form>
-      <Details data={displayData} />
-    </>
-  );
+  if (!isSubmited) {
+    return (
+      <>
+        <form onSubmit={handleSubmition}>
+          <h1>CV APPLICATION</h1>
+          <GeneralInformation
+            data={formData}
+            onChange={handleChange}
+          ></GeneralInformation>
+          <EducationExperience data={formData} onChange={handleChange} />
+          <PracticalExperience data={formData} onChange={handleChange} />
+          <button type="submit">submit form</button>
+        </form>
+      </>
+    );
+  } else {
+    return <Details data={displayData} />;
+  }
 }
 export default Form;
