@@ -2,6 +2,7 @@ import { useState } from "react";
 import GeneralInformation from "./generalInformation";
 import EducationExperience from "./educationExperience";
 import PracticalExperience from "./practicalExperience";
+import Details from "./cv";
 function Form() {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,6 +16,34 @@ function Form() {
     startDate: "",
     finishDate: "",
   });
+  const [displayData, setDisplayData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    school: "",
+    titleOfStudy: "",
+    dateOfStudy: "",
+    company: "",
+    position: "",
+    startDate: "",
+    finishDate: "",
+  });
+
+  const handleSubmition = (event) => {
+    event.preventDefault();
+    setDisplayData({
+      name: formData.name,
+      email: formData.email,
+      phoneNumber: formData.phoneNumber,
+      school: formData.school,
+      titleOfStudy: formData.titleOfStudy,
+      dateOfStudy: formData.dateOfStudy,
+      company: formData.company,
+      position: formData.position,
+      startDate: formData.startDate,
+      finishDate: formData.finishDate,
+    });
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -22,20 +51,22 @@ function Form() {
       ...prevState,
       [name]: value,
     }));
-    console.log(formData);
   };
 
   return (
-    <form>
-      <h1>CV application</h1>
-      <GeneralInformation
-        data={formData}
-        onChange={handleChange}
-      ></GeneralInformation>
-      <EducationExperience data={formData} onChange={handleChange} />
-      <PracticalExperience data={formData} onChange={handleChange} />
-      <button type="submit">submit form</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmition}>
+        <h1>CV application</h1>
+        <GeneralInformation
+          data={formData}
+          onChange={handleChange}
+        ></GeneralInformation>
+        <EducationExperience data={formData} onChange={handleChange} />
+        <PracticalExperience data={formData} onChange={handleChange} />
+        <button type="submit">submit form</button>
+      </form>
+      <Details data={displayData} />
+    </>
   );
 }
 export default Form;
