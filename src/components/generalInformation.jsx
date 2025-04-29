@@ -15,7 +15,7 @@ export default function GeneralInformation({ data, onChange }) {
       <Input
         name="email"
         value={data.email}
-        type="text"
+        type="email"
         onChange={onChange}
         id="email"
         required="required"
