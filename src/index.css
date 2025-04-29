@@ -143,7 +143,12 @@ input {
 .edit-button {
   width: 50%;
 }
-
+@media (max-width: 500px) {
+  .section-containers {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
