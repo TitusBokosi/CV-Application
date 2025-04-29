@@ -1,7 +1,7 @@
 function Input(props) {
   return (
     <div className="input-container">
-      <label htmlFor={props.id}>{props.name}</label>
+      <label htmlFor={props.id}>{props.label}</label>
       <input
         name={props.name}
         type={props.type}

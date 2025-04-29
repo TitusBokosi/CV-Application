@@ -11,6 +11,7 @@ export default function GeneralInformation({ data, onChange }) {
         onChange={onChange}
         id="name"
         required="required"
+        label="Name"
       />
       <Input
         name="email"
@@ -19,6 +20,7 @@ export default function GeneralInformation({ data, onChange }) {
         onChange={onChange}
         id="email"
         required="required"
+        label="Email Adress"
       />
       <Input
         name="phoneNumber"
@@ -27,6 +29,7 @@ export default function GeneralInformation({ data, onChange }) {
         onChange={onChange}
         id="phoneNumber"
         required="required"
+        label="Phone Number"
       />
     </section>
   );

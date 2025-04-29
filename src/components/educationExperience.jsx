@@ -11,6 +11,7 @@ export default function EducationExperience({ data, onChange }) {
         onChange={onChange}
         id="school"
         required="required"
+        label="School Name"
       />
       <Input
         name="titleOfStudy"
@@ -19,6 +20,7 @@ export default function EducationExperience({ data, onChange }) {
         onChange={onChange}
         id="titleOfStudy"
         required="required"
+        label="Title Of Study"
       />
       <Input
         name="dateOfStudy"
@@ -27,6 +29,7 @@ export default function EducationExperience({ data, onChange }) {
         onChange={onChange}
         id="dateOfStudy"
         required="required"
+        label="Date Of Study"
       />
     </section>
   );

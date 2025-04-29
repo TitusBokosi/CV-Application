@@ -10,6 +10,7 @@ export default function PracticalExperience({ data, onChange }) {
         id="company"
         type="text"
         onChange={onChange}
+        label="Company Name"
       />
       <Input
         name="position"
@@ -17,6 +18,7 @@ export default function PracticalExperience({ data, onChange }) {
         type="text"
         onChange={onChange}
         id="position"
+        label="Position"
       />
       <Input
         name="startDate"
@@ -24,6 +26,7 @@ export default function PracticalExperience({ data, onChange }) {
         type="date"
         onChange={onChange}
         id="startDate"
+        label="Start Date"
       />
       <Input
         name="finishDate"
@@ -31,6 +34,7 @@ export default function PracticalExperience({ data, onChange }) {
         type="date"
         onChange={onChange}
         id="finishDate"
+        label="Finish Date"
       />
     </section>
   );
