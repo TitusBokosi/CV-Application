@@ -42,9 +42,15 @@ export default function Details({ data, onChange }) {
         <div>
           <h2>General Information</h2>
           <div>
-            <p>name : {data.name}</p>
-            <p>email: {data.email}</p>
-            <p>phone: {data.phoneNumber}</p>
+            <p>
+              <h3>Name</h3> : {data.name}
+            </p>
+            <p>
+              <h3>Email</h3>: {data.email}
+            </p>
+            <p>
+              <h3>Phone Number</h3>: {data.phoneNumber}
+            </p>
           </div>
           <button id="general-information-edit" onClick={handleIsEditing}>
             edit
@@ -53,9 +59,15 @@ export default function Details({ data, onChange }) {
         <div>
           <h2>Education Experience</h2>
           <div>
-            <p>school: {data.school}</p>
-            <p>title of study: {data.titleOfStudy}</p>
-            <p>date of study: {data.dateOfStudy}</p>
+            <p>
+              <h3>Schhol</h3>: {data.school}
+            </p>
+            <p>
+              <h3>Title Of Study</h3>: {data.titleOfStudy}
+            </p>
+            <p>
+              <h3>Date Of Study</h3>: {data.dateOfStudy}
+            </p>
           </div>
           <button id="education-experience-edit" onClick={handleIsEditing}>
             edit
@@ -64,10 +76,19 @@ export default function Details({ data, onChange }) {
         <div>
           <h2>Practical Experience</h2>
           <div>
-            <p>company: {data.company}</p>
-            <p>position: {data.position}</p>
-            <p>start date: {data.startDate}</p>
-            <p>finish date: {data.finishDate}</p>
+            <p>
+              <h3>Company Nmae</h3>: {data.company}
+            </p>
+            <p>
+              <h3>Position</h3>: {data.position}
+            </p>
+            <p>
+              {" "}
+              <h3>Start Date</h3>: {data.startDate}
+            </p>
+            <p>
+              <h3>Finish Date</h3>: {data.finishDate}
+            </p>
           </div>
           <button id="practical-experience-edit" onClick={handleIsEditing}>
             edit
