@@ -60,18 +60,22 @@ function Form() {
       <>
         <form onSubmit={handleSubmition}>
           <h1>CV APPLICATION</h1>
-          <GeneralInformation
-            data={formData}
-            onChange={handleChange}
-          ></GeneralInformation>
-          <EducationExperience data={formData} onChange={handleChange} />
-          <PracticalExperience data={formData} onChange={handleChange} />
-          <button type="submit">submit form</button>
+          <div className="section-containers">
+            <GeneralInformation
+              data={formData}
+              onChange={handleChange}
+            ></GeneralInformation>
+            <EducationExperience data={formData} onChange={handleChange} />
+            <PracticalExperience data={formData} onChange={handleChange} />
+          </div>
+          <button type="submit" className="submit-button">
+            submit form
+          </button>
         </form>
       </>
     );
   } else {
-    return <Details data={displayData} />;
+    return <Details data={displayData} onChange={handleChange} />;
   }
 }
 export default Form;
