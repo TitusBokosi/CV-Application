@@ -13,13 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
   color: black;
   padding: 1rem;
-  max-width: 100vw;
+  width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 * {
   box-sizing: border-box;
-  max-width: 100vw;
+  max-width: 100%;
+  padding-inline: 1rem;
 }
 
 a {
@@ -101,7 +102,7 @@ form,
   align-self: center;
 }
 .submit-button {
-  width: 95%;
+  width: 100%;
   align-self: center;
 }
 .section-containers {
@@ -147,7 +148,7 @@ p {
 }
 @media (max-width: 500px) {
   * {
-    max-width: 100vw;
+    max-width: 100%;
     overflow-x: hidden;
     padding-inline: 1rem;
   }
