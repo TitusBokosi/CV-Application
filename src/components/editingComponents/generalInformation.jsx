@@ -14,14 +14,14 @@ export default function EditGeneralInformation({ data, onSave }) {
 
   function handleSubmition(event) {
     event.preventDefault();
-    onSave(initialData); // Call the onSave prop to send data to the parent
+    onSave(initialData);
   }
 
   return (
     <form onSubmit={handleSubmition}>
       <GeneralInformation data={initialData} onChange={handleChange} />
-      {/* Use local handleChange */}
-      <button>Save</button> {/* Changed "Submit" to "Save" for clarity */}
+
+      <button>Save</button>
     </form>
   );
 }
