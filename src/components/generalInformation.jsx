@@ -10,6 +10,7 @@ export default function GeneralInformation({ data, onChange }) {
         type="text"
         onChange={onChange}
         id="name"
+        required="required"
       />
       <Input
         name="email"
@@ -17,6 +18,7 @@ export default function GeneralInformation({ data, onChange }) {
         type="text"
         onChange={onChange}
         id="email"
+        required="required"
       />
       <Input
         name="phoneNumber"
@@ -24,6 +26,7 @@ export default function GeneralInformation({ data, onChange }) {
         type="number"
         onChange={onChange}
         id="phoneNumber"
+        required="required"
       />
     </section>
   );

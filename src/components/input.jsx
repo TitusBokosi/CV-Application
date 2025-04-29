@@ -8,6 +8,7 @@ function Input(props) {
         value={props.value}
         id={props.id}
         onChange={props.onChange}
+        required={props.required}
       />
     </div>
   );
