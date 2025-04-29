@@ -37,64 +37,78 @@ export default function Details({ data, onChange }) {
   }
   if (isEditing === "false") {
     return (
-      <>
-        <h1>Details</h1>
-        <div>
-          <h2>General Information</h2>
+      <div className="details">
+        <h1>Details for {data.name}</h1>
+        <div className="details-container">
           <div>
-            <p>
-              <h3>Name</h3> : {data.name}
-            </p>
-            <p>
-              <h3>Email</h3>: {data.email}
-            </p>
-            <p>
-              <h3>Phone Number</h3>: {data.phoneNumber}
-            </p>
+            <h2>General Information</h2>
+            <div>
+              <p>
+                <h3>Name:</h3> {data.name}
+              </p>
+              <p>
+                <h3>Email:</h3> {data.email}
+              </p>
+              <p>
+                <h3>Phone Number:</h3> {data.phoneNumber}
+              </p>
+            </div>
+            <button
+              id="general-information-edit"
+              className="edit-button"
+              onClick={handleIsEditing}
+            >
+              edit
+            </button>
           </div>
-          <button id="general-information-edit" onClick={handleIsEditing}>
-            edit
-          </button>
-        </div>
-        <div>
-          <h2>Education Experience</h2>
           <div>
-            <p>
-              <h3>Schhol</h3>: {data.school}
-            </p>
-            <p>
-              <h3>Title Of Study</h3>: {data.titleOfStudy}
-            </p>
-            <p>
-              <h3>Date Of Study</h3>: {data.dateOfStudy}
-            </p>
+            <h2>Education Experience</h2>
+            <div>
+              <p>
+                <h3>Schhol:</h3> {data.school}
+              </p>
+              <p>
+                <h3>Title Of Study:</h3> {data.titleOfStudy}
+              </p>
+              <p>
+                <h3>Date Of Study:</h3> {data.dateOfStudy}
+              </p>
+            </div>
+            <button
+              id="education-experience-edit"
+              className="edit-button"
+              onClick={handleIsEditing}
+            >
+              edit
+            </button>
           </div>
-          <button id="education-experience-edit" onClick={handleIsEditing}>
-            edit
-          </button>
-        </div>
-        <div>
-          <h2>Practical Experience</h2>
           <div>
-            <p>
-              <h3>Company Nmae</h3>: {data.company}
-            </p>
-            <p>
-              <h3>Position</h3>: {data.position}
-            </p>
-            <p>
-              {" "}
-              <h3>Start Date</h3>: {data.startDate}
-            </p>
-            <p>
-              <h3>Finish Date</h3>: {data.finishDate}
-            </p>
+            <h2>Practical Experience</h2>
+            <div>
+              <p>
+                <h3>Company Name:</h3> {data.company}
+              </p>
+              <p>
+                <h3>Position:</h3> {data.position}
+              </p>
+              <p>
+                {" "}
+                <h3>Start Date:</h3> {data.startDate}
+              </p>
+              <p>
+                <h3>Finish Date:</h3> {data.finishDate}
+              </p>
+            </div>
+            <button
+              id="practical-experience-edit"
+              className="edit-button"
+              onClick={handleIsEditing}
+            >
+              edit
+            </button>
           </div>
-          <button id="practical-experience-edit" onClick={handleIsEditing}>
-            edit
-          </button>
         </div>
-      </>
+      </div>
     );
   } else if (isEditing === "generalInformation") {
     return (
