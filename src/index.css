@@ -119,6 +119,8 @@ input {
 }
 .details {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 .details > h1 {
   text-align: center;
@@ -135,8 +137,10 @@ input {
   color: rgb(12, 135, 243);
 }
 .details-container > div {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
-  width: 100%;
+  width: 50%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
 }
@@ -146,15 +150,30 @@ input {
 .details-container > div > div > p {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  border-bottom: solid black 1px;
+  width: 100%;
+}
+.details-container > div > div > p > p {
+  width: 50%;
+  text-align: left;
+  overflow-x: scroll;
+}
+h3 {
+  font-weight: bold;
+  width: 50%;
 }
 .edit-button {
-  width: 50%;
+  width: 100%;
 }
 @media (max-width: 500px) {
   .section-containers {
     display: flex;
     flex-direction: column;
+  }
+  .details-container > div {
+    width: 100%;
   }
 }
 @media (prefers-color-scheme: light) {

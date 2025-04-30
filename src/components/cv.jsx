@@ -44,13 +44,13 @@ export default function Details({ data, onChange }) {
             <h2>General Information</h2>
             <div>
               <p>
-                <h3>Name:</h3> {data.name}
+                <h3>Name:</h3> <p> {data.name}</p>
               </p>
               <p>
-                <h3>Email:</h3> {data.email}
+                <h3>Email:</h3> <p>{data.email}</p>
               </p>
               <p>
-                <h3>Phone Number:</h3> {data.phoneNumber}
+                <h3>Phone Number:</h3> <p>{data.phoneNumber}</p>
               </p>
             </div>
             <button
@@ -65,13 +65,13 @@ export default function Details({ data, onChange }) {
             <h2>Education Experience</h2>
             <div>
               <p>
-                <h3>Schhol:</h3> {data.school}
+                <h3>Schhol:</h3> <p>{data.school}</p>
               </p>
               <p>
-                <h3>Title Of Study:</h3> {data.titleOfStudy}
+                <h3>Title Of Study:</h3> <p>{data.titleOfStudy}</p>
               </p>
               <p>
-                <h3>Date Of Study:</h3> {data.dateOfStudy}
+                <h3>Date Of Study:</h3> <p> {data.dateOfStudy}</p>
               </p>
             </div>
             <button
@@ -86,17 +86,17 @@ export default function Details({ data, onChange }) {
             <h2>Practical Experience</h2>
             <div>
               <p>
-                <h3>Company Name:</h3> {data.company}
+                <h3>Company Name:</h3> <p> {data.company}</p>
               </p>
               <p>
-                <h3>Position:</h3> {data.position}
+                <h3>Position:</h3> <p>{data.position}</p>
               </p>
               <p>
                 {" "}
-                <h3>Start Date:</h3> {data.startDate}
+                <h3>Start Date:</h3> <p>{data.startDate}</p>
               </p>
               <p>
-                <h3>Finish Date:</h3> {data.finishDate}
+                <h3>Finish Date:</h3> <p>{data.finishDate}</p>
               </p>
             </div>
             <button
