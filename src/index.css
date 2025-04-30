@@ -156,13 +156,13 @@ input {
   width: 100%;
 }
 .details-container > div > div > p > p {
-  width: 50%;
+  width: 60%;
   text-align: left;
   overflow-x: scroll;
 }
 h3 {
   font-weight: bold;
-  width: 50%;
+  width: 40%;
 }
 .edit-button {
   width: 100%;
