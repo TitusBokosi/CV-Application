@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   line-height: 1.5;
   font-weight: 400;
 
@@ -101,6 +101,10 @@ section > div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.input-container {
+  display: grid;
+  grid-template-columns: repeat(2, 0.2fr, 0.8fr);
+}
 input {
   padding: 0.5rem;
   border-radius: 1rem;
@@ -108,6 +112,7 @@ input {
   outline: solid rgb(12, 135, 243) 0.17rem;
   border: none;
   color: black;
+  width: 100%;
 }
 .details {
   padding: 1rem;
